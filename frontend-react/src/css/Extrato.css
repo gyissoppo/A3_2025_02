@@ -1,0 +1,165 @@
+/* Container geral */
+.extrato-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: "DM Sans", "Inter", sans-serif;
+  color: #000;
+}
+
+/* Título */
+.extrato-container h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem; /* reduzido */
+  text-align: center;
+}
+
+/* Container geral */
+.menu-extrato-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "DM Sans", "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Cabeçalho + busca fixos */
+.extrato-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 20;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem 0.7rem;
+}
+
+/* Área rolável */
+.extrato-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+}
+
+/* Cabeçalho superior */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 600px) {
+  .extrato-header {
+    padding: 0.8rem 1rem 0.6rem;
+  }
+
+  .extrato-scroll {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Cabeçalho fixo (Voltar + título) */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+/* Container da barra de busca */
+.search-container {
+  position: sticky;
+  top: 0; /* fixa no topo */
+  background-color: #ffffff; /* evita sobreposição */
+  z-index: 10; /* fica acima das transações */
+  padding-bottom: 0.4rem;
+}
+
+/* Área com scroll */
+.extrato-scroll {
+  flex: 1; /* ocupa o espaço restante da tela */
+  overflow-y: auto;
+  padding-right: 0.3rem; /* evita que a barra encoste no scroll */
+}
+
+/* Estilo da scrollbar (opcional e clean) */
+.extrato-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.extrato-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.extrato-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+
+/* Transações */
+.transaction {
+  margin-left: 0.5rem;
+  margin-bottom: 0.15rem; /* reduzido */
+  font-size: 0.9rem;
+}
+
+.transaction-in {
+  color: #00b300; /* verde */
+  font-weight: bold;
+}
+
+.transaction-out {
+  color: #ff2e2e; /* vermelho */
+  font-weight: bold;
+}
+
+/* Descrição da transação */
+.transaction-desc {
+  font-size: 0.8rem;
+  color: #555;
+  margin-left: 0.2rem;
+  margin-bottom: 0.1rem; /* reduzido */
+}
+
+/* Botão voltar */
+.back-link {
+  display: inline-block;
+  margin-top: 1rem; /* menor */
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .extrato-container {
+    padding: 0.8rem;
+  }
+
+  .extrato-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    font-size: 0.85rem;
+    padding: 0.3rem;
+  }
+
+  .transaction {
+    font-size: 0.85rem;
+  }
+
+  .transaction-desc {
+    font-size: 0.75rem;
+  }
+}

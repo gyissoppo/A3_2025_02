@@ -1,0 +1,187 @@
+/* Estrutura geral */
+.menu-container {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "DM Sans", "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+/* Cabeçalho */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.user-config {
+  display: inline-block; /* necessário para padding funcionar direito */
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none; /* remove sublinhado do link */
+  transition: transform 0.2s;
+  text-align: right;
+}
+
+.user-config:hover {
+  transform: none; /* remove rotação */
+  color: #555; /* opcional, muda cor no hover */
+}
+
+
+/* Saldo */
+.menu-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0 1.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  flex-wrap: nowrap; /* impede que quebre linha */
+}
+
+.balance-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.balance-info .label {
+  color: #000000;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.balance-info .value {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Botões gerais */
+.btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+/* Movimentações — valores abaixo do saldo, alinhados à esquerda */
+.menu-transactions {
+  display: flex;
+  flex-direction: column; /* vertical */
+  gap: 0.5rem; /* espaço entre os valores */
+  margin-top: 0.1rem; /* mais próxima do saldo */
+  padding-left: 0.5rem; /* alinhamento à esquerda */
+  align-items: flex-start; /* garante que fiquem na esquerda */
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .transaction {
+    font-size: 1rem;
+  }
+
+  .menu-transactions {
+    margin-top: 0.1rem; /* mantém proximidade do saldo no celular */
+  }
+}
+
+.transaction {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.transaction-in {
+  color: #00b300; /* verde para entrada */
+}
+
+.transaction-out {
+  color: #ff2e2e; /* vermelho para saída */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .transaction {
+    font-size: 1rem;
+  }
+}
+
+/* Ações extras */
+.menu-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Rodapé dentro do fluxo normal, canto esquerdo */
+.menu-footer {
+  margin-top: 2rem; /* espaço em relação ao conteúdo acima */
+  text-align: left;  /* alinha à esquerda */
+  padding: 0;        /* remove padding extra */
+}
+
+.back-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: #000000;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .menu-balance {
+    flex-direction: row; /* mantém lado a lado */
+    align-items: center;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .balance-info {
+    flex: 1;
+  }
+
+  .view-statement {
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+  }
+
+  .menu-actions {
+    margin-top: 6.5rem;
+  }
+}
+
+
+/* Faz o "Ver extrato" se ajustar e não cair pra baixo */
+.view-statement {
+  white-space: nowrap;
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-self: center;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.view-statement:hover {
+  color: #000000;
+}

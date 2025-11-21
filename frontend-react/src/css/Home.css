@@ -1,0 +1,107 @@
+/* Estilo global */
+body {
+  margin: 0;
+  font-family: "DM Sans", "Inter", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Container principal */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header com logo */
+.home-header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.home-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+/* Conteúdo principal centralizado */
+.home-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.impact-text {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 0.5rem;
+}
+
+/* Pergunta e botões */
+.account-question {
+  margin-top: 2rem;
+}
+
+.button-group {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+/* Botão "Não" invertido */
+.btn-no {
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.btn-no:hover {
+  background-color: #000000;
+  color: #cccccc;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .menu-balance {
+    flex-direction: row; /* mantém lado a lado */
+    align-items: center;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .balance-info {
+    flex: 1;
+  }
+
+  .view-statement {
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+  }
+
+  .menu-actions {
+    margin-top: 1.5rem;
+  }
+}
+
