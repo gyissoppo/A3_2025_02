@@ -6,9 +6,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "fastify": "*",
     "@fastify/cors": "*",
     "dotenv": "*",
+    "fastify": "*",
+    "mysql2": "^3.15.3",
     "node-fetch": "*"
   }
 }
