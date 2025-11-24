@@ -1,0 +1,11 @@
+1º terminal:
+...\backend-node
+npm start
+
+2º terminal:
+...\frontend-react
+npm start
+
+intelij:
+...\currency-api-java\src\main\java\example\currency
+start CurrencyApplication.java
